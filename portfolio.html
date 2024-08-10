@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-       <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="diary.html">Diary</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakaaysha - Interactive Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Lakaaysha - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="diary.html">DIARY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="portfolio-page">
+        <h1 class="portfolio-title">Human vs nature vs<br>human vs nature;<br>and so on</h1>
+        
+        <div class="portfolio-content">
+            <div class="portfolio-sidebar">
+                <h2>7+1</h2>
+                <div class="scrollable-list">
+                    <ul id="works-list">
+                        <li data-image="the-dream.jpg">The Dream</li>
+                        <li data-image="double-exposure.jpg">Double Exposure; Chapter One</li>
+                        <li data-image="human-vs-nature.jpg">Human vs Nature vs Human vs Nature; and so on</li>
+                        <li data-image="dutch-capitalism.jpg">Reflections on Dutch Capitalism</li>
+                        <li data-image="society.jpg">SOCIETY</li>
+                        <li data-image="die-turen.jpg">Die Türen schließen sich</li>
+                        <li data-image="rock-song.jpg">Not Another Rock Song</li>
+                        <li data-image="make-sense.jpg">Things Must Make Sense</li>
+                        <li data-image="ai-beautz.jpg">AI BEAUTZ</li>
+                        <li data-image="faulty.jpg">Faulty But Working</li>
+                        <li data-image="love-story.jpg">Untitled Love Story</li>
+                        <li data-image="concept.jpg">A concept Abcdfijklmnopqrstuvwxyz</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="portfolio-display">
+                <video id="background-video" loop muted>
+                    <source src="background.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img id="selected-work" src="" alt="Selected work">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lakaaysha. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
