@@ -141,4 +141,113 @@ footer {
     margin-bottom: 2rem;
 }
 
+.portfolio-page {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.portfolio-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--color-deep-brown);
+    margin-bottom: 2rem;
+}
+
+.portfolio-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.portfolio-sidebar {
+    flex: 0 0 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.portfolio-sidebar h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-deep-brown);
+    margin-bottom: 1rem;
+}
+
+.scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#works-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#works-list li {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+    color: var(--color-deep-brown);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#works-list li:last-child {
+    border-bottom: none;
+}
+
+#works-list li:hover {
+    color: var(--color-terracotta);
+}
+
+.scrollable-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.portfolio-display {
+    flex: 1;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+#background-video, #selected-work {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#selected-work {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .portfolio-content {
+        flex-direction: column;
+    }
+
+    .portfolio-sidebar, .portfolio-display {
+        width: 100%;
+    }
+}
+
 /* Add more specific styles for portfolio, diary, about, and contact pages as needed */
