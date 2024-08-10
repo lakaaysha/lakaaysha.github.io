@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakaaysha - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Lakaaysha Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="diary.html">DIARY</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#diary">DIARY</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Human vs nature vs<br>human vs nature;<br>and so on</h1>
-        
-        <h2>7+1</h2>
-        
-        <ul id="project-list">
-            <li>The Dream</li>
-            <li>Double Exposure; Chapter One</li>
-            <li>Human vs Nature vs Human vs Nature; and so on</li>
-            <li>Reflections on Dutch Capitalism</li>
-            <li>SOCIETY</li>
-            <li>Die Türen schließen sich</li>
-            <li>Not Another Rock Song</li>
-            <li>Things Must Make Sense</li>
-            <li>AI BEAUTZ</li>
-            <li>Faulty But Working</li>
-            <li>Untitled Love Story</li>
-            <li>A concept Abcdfijklmnopqrstuvwxyz</li>
-        </ul>
+        <h1 id="artwork-title" class="artwork-title">Human vs nature vs human vs nature; and so on</h1>
+
+        <div id="dynamic-background" class="dynamic-background"></div>
+
+        <div class="project-list">
+            <ul id="scroll-list">
+                <li data-background="url1.jpg" data-title="7+1">7+1</li>
+                <li data-background="url2.jpg" data-title="The Dream">The Dream</li>
+                <li data-background="url3.jpg" data-title="Double Exposure; Chapter One">Double Exposure; Chapter One</li>
+                <li data-background="url4.jpg" data-title="Human vs Nature vs Human vs Nature; and so on">Human vs Nature vs Human vs Nature; and so on</li>
+                <li data-background="url5.jpg" data-title="Reflections on Dutch Capitalism">Reflections on Dutch Capitalism</li>
+                <li data-background="url6.jpg" data-title="SOCIETY">SOCIETY</li>
+                <li data-background="url7.jpg" data-title="Die Türen schließen sich">Die Türen schließen sich</li>
+            </ul>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Lakaaysha. All rights reserved.</p>
+        <p>© 2024 Lakaaysha. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
