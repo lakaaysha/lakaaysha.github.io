@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakaaysha - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -19,32 +19,29 @@
         </nav>
     </header>
 
-    <main>
-        <div class="dynamic-background" id="background-container"></div>
+    <main class="portfolio-container">
+        <aside class="project-list">
+            <h2>Projects</h2>
+            <ul id="project-menu">
+                <li data-image="images/filmpics/double-exposure.jpg">Double Exposure</li>
+                <li data-image="images/paintings/reflectionsondutchcapitalism.png">Reflections on Dutch Capitalism</li>
+                <li data-video="videos/Whirlpool Ea69ca.mp4">Whirlpool</li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </aside>
 
-        <section class="portfolio-content">
-            <div class="artwork-title" id="artwork-title">Click on a project to view details</div>
-            
-            <aside class="project-list">
-                <ul id="scroll-list">
-                    <li class="artwork" data-video="videos/video1.mp4" data-background="images/filmpics/double-exposure.png" data-title="Double Exposure">
-                        Double Exposure
-                    </li>
-                    <li class="artwork" data-video="videos/video2.mp4" data-background="images/filmpics/reflectionsondutchcapitalism.png" data-title="Reflections on Dutch Capitalism">
-                        Reflections on Dutch Capitalism
-                    </li>
-                    <li class="artwork" data-video="videos/video3.mp4" data-background="images/filmpics/HumanvsnaturevsHumanvsnature.png" data-title="Human vs Nature vs Human vs Nature">
-                        Human vs Nature vs Human vs Nature
-                    </li>
-                </ul>
-            </aside>
+        <section class="project-display">
+            <div id="media-container">
+                <!-- Images or videos will be displayed here -->
+            </div>
+            <h1 id="project-title">Select a project to view details</h1>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Lakaaysha. All rights reserved.</p>
+        <p>© 2024 Lakaaysha Van Ewijk. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
