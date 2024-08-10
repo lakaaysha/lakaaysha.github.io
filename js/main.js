@@ -184,4 +184,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // Additional JavaScript functionality (e.g., typewriter effect, dynamic background, etc.) will go below this line as we progress step-by-step.
 
+document.addEventListener('DOMContentLoaded', () => {
+    const artworks = document.querySelectorAll('.artwork');
+    const backgroundContainer = document.getElementById('background-container');
+    
+    function changeBackground(element) {
+        const video = element.dataset.video;
+        const image = element.dataset.background;
+        const title = element.dataset.title;
+        
+        const titleElement = document.getElementById('artwork-title');
+        typeInEffect(titleElement, title, 100);  // Use your existing typeInEffect function
+
+        if (video) {
+            backgroundContainer.innerHTML = `
+                <video autoplay loop muted playsinline class="background-media">
+                    <source src="${video}" type="video/mp4">
+                </video>
+            `;
+        } else if (image) {
+            backgroundContainer.innerHTML = `<img src="${image}" alt="Background Image" class="background-media">`;
+        }
+    }
+
+    artworks.forEach(artwork => {
+        artwork.addEventListener('click', () => changeBackground(artwork));
+        
+        artwork.addEventListener('mouseenter', () => changeBackground(artwork));
+    });
+
+    // Set initial background and title
+    if (artworks.length > 0) {
+        changeBackground(artworks[0]);
+    }
+});
+
 });
