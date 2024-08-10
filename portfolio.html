@@ -3,21 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakaaysha Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Lakaaysha - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#diary">DIARY</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="diary.html">Diary</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-   
+    <main>
+        <div class="dynamic-background" id="background-container"></div>
+
+        <section class="portfolio-content">
+            <div class="artwork-title">My Portfolio</div>
+            
+            <aside class="project-list">
+                <ul id="scroll-list">
+                    <li class="artwork" data-video="videos/video1.mp4" data-background="images/bg1.jpg">
+                        Project 1
+                    </li>
+                    <li class="artwork" data-video="videos/video2.mp4" data-background="images/bg2.jpg">
+                        Project 2
+                    </li>
+                    <li class="artwork" data-video="videos/video3.mp4" data-background="images/bg3.jpg">
+                        Project 3
+                    </li>
+                    <!-- Add more projects as needed -->
+                </ul>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lakaaysha. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
