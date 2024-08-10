@@ -1,39 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const scrollList = document.getElementById('scroll-list');
-    const backgroundContainer = document.getElementById('background-container');
-    const artworkTitle = document.getElementById('artwork-title');
+    const projectItems = document.querySelectorAll('#project-menu li');
+    const mediaContainer = document.getElementById('media-container');
 
-    function displayMedia(element) {
-        const imageSrc = element.getAttribute('data-image');
-        const videoSrc = element.getAttribute('data-video');
-        const projectName = element.textContent;
+    projectItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const image = item.dataset.image;
+            const video = item.dataset.video;
 
-        // Clear previous media
-        backgroundContainer.innerHTML = '';
-
-        if (imageSrc) {
-            backgroundContainer.innerHTML = `<img src="${imageSrc}" alt="${projectName}" class="background-media">`;
-        } else if (videoSrc) {
-            backgroundContainer.innerHTML = `
-                <video autoplay loop muted playsinline class="background-media">
-                    <source src="${videoSrc}" type="video/mp4">
-                </video>
-            `;
-        }
-
-        // Update artwork title
-        artworkTitle.textContent = projectName;
-    }
-
-    scrollList.addEventListener('click', (event) => {
-        if (event.target.tagName === 'LI') {
-            displayMedia(event.target);
-        }
+            if (image) {
+                mediaContainer.innerHTML = `<img src="${image}" alt="Project Image" class="background-media">`;
+            } else if (video) {
+                mediaContainer.innerHTML = `
+                    <video autoplay loop muted playsinline class="background-media">
+                        <source src="${video}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                `;
+            }
+        });
     });
-
-    // Set initial media if there are projects
-    const firstProject = scrollList.querySelector('li');
-    if (firstProject) {
-        displayMedia(firstProject);
-    }
 });
