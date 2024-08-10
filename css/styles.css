@@ -107,38 +107,64 @@ main {
 
 /* ... (rest of the styles remain the same) ... */
 
-
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-deep-brown);
+:root {
+    --color-sand: #E6D5B8;
+    --color-terracotta: #B6594C;
+    --color-deep-brown: #5E3023;
+    --color-muted-green: #7A8C7E;
+    --color-cream: #F7F3E8;
+    --color-black: #1A1A1A;
 }
 
-.accent-text {
-    color: var(--color-muted-green);
-    font-style: italic;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-footer {
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
     background-color: var(--color-deep-brown);
-    color: var(--color-cream);
-    text-align: center;
     padding: 1rem;
 }
 
-/* Styles for other pages */
-.page-content {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
-.page-title {
-    color: var(--color-terracotta);
-    text-align: center;
-    margin-bottom: 2rem;
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--color-cream);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: var(--color-sand);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-page {
@@ -179,12 +205,12 @@ footer {
     padding-right: 10px;
 }
 
-#works-list {
+#project-list {
     list-style-type: none;
     padding: 0;
 }
 
-#works-list li {
+#project-list li {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 0.5rem;
     color: var(--color-deep-brown);
@@ -194,30 +220,12 @@ footer {
     border-bottom: 1px solid #e0e0e0;
 }
 
-#works-list li:last-child {
+#project-list li:last-child {
     border-bottom: none;
 }
 
-#works-list li:hover {
+#project-list li:hover {
     color: var(--color-terracotta);
-}
-
-.scrollable-list::-webkit-scrollbar {
-    width: 8px;
-}
-
-.scrollable-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-}
-
-.scrollable-list::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-}
-
-.scrollable-list::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }
 
 .portfolio-display {
@@ -225,19 +233,16 @@ footer {
     position: relative;
     height: 600px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
 }
 
-#background-video, #selected-work {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#selected-work {
-    display: none;
+footer {
+    background-color: var(--color-deep-brown);
+    color: var(--color-cream);
+    text-align: center;
+    padding: 1rem;
 }
 
 @media (max-width: 768px) {
