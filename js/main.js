@@ -163,4 +163,25 @@ footer {
 }
 
     // Add more JavaScript functionality as needed
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Ensure the video loops every 5 seconds
+    const video = document.querySelector('.hero-bg');
+    if (video) {
+        video.addEventListener('loadedmetadata', () => {
+            if (video.duration > 5) {
+                setInterval(() => {
+                    if (video.currentTime >= 5) {
+                        video.currentTime = 0;
+                    }
+                }, 100);
+            }
+        });
+    }
+
+    // Existing or additional JavaScript functionality
+    // (e.g., typewriter effect, dynamic background handling, etc.)
+});
+
+// Additional JavaScript functionality (e.g., typewriter effect, dynamic background, etc.) will go below this line as we progress step-by-step.
+
 });
