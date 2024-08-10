@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakaaysha - Film Director & Artist</title>
+    <title>Lakaaysha - Interactive Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="diary.html">Diary</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="background-container"></div>
+    
+    <div class="portfolio-container">
+        <div class="portfolio-sidebar">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="portfolio-content">
+            <p class="portfolio-description">Whatever I find interesting enough to make work of</p>
+            <div class="artwork-list">
+                <div class="artwork" data-background="images/artwork1.jpg" data-video="videos/artwork1.mp4">
+                    <img src="images/thumbnail1.jpg" alt="Artwork 1">
+                    <h3>Artwork 1</h3>
+                </div>
+                <div class="artwork" data-background="images/artwork2.jpg">
+                    <img src="images/thumbnail2.jpg" alt="Artwork 2">
+                    <h3>Artwork 2</h3>
+                </div>
+                <!-- Add more artwork items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="diary.html">Diary</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
