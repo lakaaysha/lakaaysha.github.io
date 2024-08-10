@@ -61,6 +61,7 @@ main {
     position: relative;
 }
 
+/* Dynamic background section */
 .dynamic-background {
     position: absolute;
     top: 0;
@@ -118,14 +119,6 @@ main {
     background-color: var(--color-sand);
 }
 
-footer {
-    background-color: var(--color-deep-brown);
-    color: var(--color-cream);
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
     .artwork-title {
@@ -175,4 +168,12 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-deep-brown);
+}
+
+footer {
+    background-color: var(--color-deep-brown);
+    color: var(--color-cream);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
 }
