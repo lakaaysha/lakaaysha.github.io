@@ -35,3 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
         changeBackground(artworks[0]);
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const projectMenu = document.getElementById('project-menu');
+    const mediaContainer = document.getElementById('media-container');
+    const projectTitle = document.getElementById('project-title');
+
+    projectMenu.addEventListener('click', (event) => {
+        if (event.target.tagName === 'LI') {
+            const imageSrc = event.target.getAttribute('data-image');
+            const videoSrc = event.target.getAttribute('data-video');
+            const projectName = event.target.textContent;
+
+            // Clear previous media
+            mediaContainer.innerHTML = '';
+
+            if (imageSrc) {
+                // Create and display new image
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = projectName;
+                mediaContainer.appendChild(img);
+            } else if (videoSrc) {
+                // Create and display new video
+                const video = document.createElement('video');
+                video.src = videoSrc;
+                video.controls = true;
+                video.autoplay = true;
+                video.muted = true;
+                video.loop = true;
+                mediaContainer.appendChild(video);
+            }
+
+            // Update project title
+            projectTitle.textContent = projectName;
+        }
+    });
+});
