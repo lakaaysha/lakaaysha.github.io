@@ -1,4 +1,3 @@
-/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap');
 
 :root {
@@ -59,104 +58,121 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-.hero {
-    flex: 1;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
 }
 
-/* styles.css */
-/* ... (previous styles remain the same) ... */
-
-.hero {
-    position: relative;
-    height: calc(100vh - 60px); /* Adjust based on your header height */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-bg {
+.dynamic-background {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
     z-index: -1;
-    object-fit: cover;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    background-color: rgba(247, 243, 232, 0.8); /* Adjust opacity as needed */
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 600px;
-}
-
-/* ... (rest of the styles remain the same) ... */
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
-
-header {
-    margin-bottom: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-h1 {
+.artwork-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--color-deep-brown);
+    padding: 2rem;
+    max-width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+    background-color: rgba(247, 243, 232, 0.8);
 }
 
-h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+.project-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#project-list {
-    list-style-type: disc;
-    padding-left: 20px;
+#scroll-list {
+    list-style-type: none;
 }
 
-#project-list li {
-    margin-bottom: 5px;
+#scroll-list li {
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid var(--color-sand);
+}
+
+#scroll-list li:last-child {
+    border-bottom: none;
+}
+
+#scroll-list li:hover {
+    background-color: var(--color-sand);
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 14px;
+    background-color: var(--color-deep-brown);
+    color: var(--color-cream);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
 }
 
-/* Add more specific styles for portfolio, diary, about, and contact pages as needed */
+/* Responsive design */
+@media (max-width: 768px) {
+    .artwork-title {
+        font-size: 2rem;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .project-list {
+        width: 100%;
+        height: 30%;
+        top: auto;
+        bottom: 0;
+    }
+
+    #scroll-list {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+
+    #scroll-list li {
+        flex: 0 0 auto;
+        width: 150px;
+        border-bottom: none;
+        border-right: 1px solid var(--color-sand);
+    }
+
+    #scroll-list li:last-child {
+        border-right: none;
+    }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-muted-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-deep-brown);
+}
