@@ -3,41 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakaaysha - Portfolio</title>
+    <title>Portfolio - Lakaaysha</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="diary.html">Diary</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="diary.html">Diary</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <main class="portfolio-container">
-        <aside class="project-list">
-            <h2>Projects</h2>
-            <ul id="project-menu">
-                <li data-image="images/filmpics/double-exposure.png">Double Exposure</li>
-                <li data-image="images/filmpics/reflectionsondutchcapitalism.png">Reflections on Dutch Capitalism</li>
-                <li data-video="videos/Whirlpool Ea69ca.mp4">Whirlpool</li>
+    <main>
+        <div class="project-list">
+            <ul id="project-list">
+                <li class="artwork" data-background="images/filmpics/reflectionsondutchcapitalism.png" data-title="Reflections on Dutch Capitalism">
+                    Reflections on Dutch Capitalism
+                </li>
+                <!-- Add other artworks as needed -->
             </ul>
-        </aside>
-
-        <section class="project-display">
-            <div id="media-container">
-                <p>Select a project to view details</p>
-            </div>
-        </section>
+        </div>
+        <div class="artwork-display">
+            <div id="artwork-title"></div>
+            <div id="artwork-image"></div>
+        </div>
     </main>
 
     <footer>
-        <p>© 2024 Lakaaysha Van Ewijk. All rights reserved.</p>
+        <p>&copy; 2024 Lakaaysha Van Ewijk. All rights reserved.</p>
     </footer>
 
     <script src="main.js"></script>
