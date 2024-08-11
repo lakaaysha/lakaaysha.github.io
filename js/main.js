@@ -21,27 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const artworks = document.querySelectorAll('.artwork');
-    const backgroundContainer = document.getElementById('background-container');
-    const titleElement = document.getElementById('artwork-title');
+    const projects = document.querySelectorAll('#project-menu li');
+    const mediaContainer = document.getElementById('media-container');
 
-    function changeBackground(element) {
-        const image = element.dataset.background;
-        const title = element.dataset.title;
-        
-        // Update the title
-        titleElement.textContent = title;
+    function updateMediaContent(project) {
+        const image = 'images/filmpics/reflectionsondutchcapitalism.png';  // Placeholder image
+        const title = project.textContent;
 
-        // Update the background image
-        backgroundContainer.innerHTML = `<img src="${image}" alt="${title}" class="background-media">`;
+        mediaContainer.innerHTML = `
+            <div class="artwork-title">${title}</div>
+            <img src="${image}" alt="${title}" class="background-media">
+        `;
     }
 
-    artworks.forEach(artwork => {
-        artwork.addEventListener('click', () => changeBackground(artwork));
+    projects.forEach(project => {
+        project.addEventListener('click', () => updateMediaContent(project));
     });
 
-    // Set initial background and title (optional)
-    if (artworks.length > 0) {
-        changeBackground(artworks[0]);
+    // Set initial content to the first project
+    if (projects.length > 0) {
+        updateMediaContent(projects[0]);
     }
 });
